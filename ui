@@ -1,4 +1,4 @@
--- HiDSFSF
+-- Hi
 
 
 local cloneref = cloneref or function(a)
@@ -2924,7 +2924,7 @@ function am:AddTab(t)
             "ImageLabel",
             {
                 Image = "http://www.roblox.com/asset/?id=12266946128",
-                ImageColor3 = an.Default and b_ or Color3.fromRGB(255, 255, 255),
+                ImageColor3 = b.Themes.AccentColor,
                 ImageTransparency = 0.5,
                 AnchorPoint = an.Default and Vector2.new(1, 0.5) or Vector2.new(0, 0.5),
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
@@ -2992,14 +2992,14 @@ function am:AddTab(t)
                     )
                     c:Animation(
                         c2,
-                        {ImageColor3 = an.Default and b_ or Color3.fromRGB(255, 255, 255)},
+                        {ImageColor3 = b.Themes.AccentColor},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
                     )
                     c:Animation(
                         c1,
-                        {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(255, 255, 255)},
+                        {Color = b.Themes.AccentColor},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
@@ -3059,14 +3059,14 @@ function am:AddTab(t)
                         )
                         c:Animation(
                             c2,
-                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(255, 255, 255)},
+                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
                         )
                         c:Animation(
                             c1,
-                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(255, 255, 255)},
+                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
