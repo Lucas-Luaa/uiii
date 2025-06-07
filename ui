@@ -1,3 +1,6 @@
+-- Hi
+
+
 local cloneref = cloneref or function(a)
     return a
 end
@@ -78,7 +81,7 @@ local b, c = {
             DisabledTextColor = Color3.fromRGB(255, 255, 255)
         },
         ["Snow"] = {
-            AccentColor = Color3.fromRGB(255,255,255),
+            AccentColor = Color3.fromRGB(255, 255, 255),
             BackgroundColor = Color3.fromRGB(75, 75, 75),
             TextColor = Color3.fromRGB(255, 255, 255),
             DisabledTextColor = Color3.fromRGB(255, 255, 255)
@@ -1258,12 +1261,13 @@ function c:SetTheme(ae)
             aj[ah] = ai
         end
     end
+    b.Themes.AccentColor = af.AccentColor
     c:SetThemeProperty(b.Storage.Background, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.SelectedFrame, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.Toggles, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.ToggleImages, "ImageColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.Selected, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.SliderValue, "BackgroundColor3", af.BackgroundColor)
+    c:SetThemeProperty(b.Storage.SelectedFrame, "BackgroundColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.Toggles, "BackgroundColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.ToggleImages, "ImageColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.Selected, "BackgroundColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.SliderValue, "BackgroundColor3", af.AccentColor)
     local ak = c:LightenColor(b.Themes.AccentColor, 0.5)
     local al = c:DarkenColor(b.Themes.AccentColor, 0.5)
     c:SetThemeProperty(
