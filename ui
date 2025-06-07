@@ -1245,47 +1245,51 @@ function c:MakeResizeable(x, V)
     )
 end
 function c:SetThemeProperty(aa, ab, z)
-    for ac, ad in pairs(aa) do
+    for _, ad in pairs(aa) do
         ad[ab] = z
     end
 end
+
 function c:SetTheme(ae)
     local af = b.Presets[ae]
-    b.Themes = af
     if not af then
         warn("Theme not found:", ae)
         return
     end
-    function c:SetThemeProperty(ag, ah, ai)
-        for ac, aj in pairs(ag) do
-            aj[ah] = ai
-        end
-    end
+
+    b.Themes.AccentColor = af.AccentColor
+    b.Themes.BackgroundColor = af.BackgroundColor
+    b.Themes.TextColor = af.TextColor
+    b.Themes.DisabledTextColor = af.DisabledTextColor
+
     c:SetThemeProperty(b.Storage.Background, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.SelectedFrame, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.Toggles, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.ToggleImages, "ImageColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.Selected, "BackgroundColor3", af.BackgroundColor)
-    c:SetThemeProperty(b.Storage.SliderValue, "BackgroundColor3", af.BackgroundColor)
-    local ak = c:LightenColor(af.BackgroundColor, 0.05)
+    c:SetThemeProperty(b.Storage.SelectedFrame, "BackgroundColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.Toggles, "BackgroundColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.ToggleImages, "ImageColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.Selected, "BackgroundColor3", af.AccentColor)
+    c:SetThemeProperty(b.Storage.SliderValue, "BackgroundColor3", af.AccentColor)
+
+    local ak = c:LightenColor(af.AccentColor, 0.05)
     local al = c:DarkenColor(af.BackgroundColor, 0.05)
+
     c:SetThemeProperty(
         b.Storage.BackgroundGradient,
         "Color",
-        ColorSequence.new({ColorSequenceKeypoint.new(0, af.BackgroundColor), ColorSequenceKeypoint.new(1, ak)})
+        ColorSequence.new({ColorSequenceKeypoint.new(0, af.BackgroundColor), ColorSequenceKeypoint.new(1, c:LightenColor(af.BackgroundColor, 0.05))})
     )
+
     c:SetThemeProperty(
         b.Storage.Notification,
         "Color",
         ColorSequence.new({ColorSequenceKeypoint.new(0, af.BackgroundColor), ColorSequenceKeypoint.new(1, al)})
     )
+
     c:SetThemeProperty(
         b.Storage.DropdownGradient,
         "Color",
-        ColorSequence.new({ColorSequenceKeypoint.new(0, af.BackgroundColor), ColorSequenceKeypoint.new(1, ak)})
+        ColorSequence.new({ColorSequenceKeypoint.new(0, af.AccentColor), ColorSequenceKeypoint.new(1, ak)})
     )
-    c:SetThemeProperty(b.Storage.SliderImage, "ImageColor3", af.BackgroundColor)
-end
+    c:SetThemeProperty(b.Storage.SliderImage, "ImageColor3", af.AccentColor)
 end
 function b:Window(t)
 local am = {Active = nil, Maximized = false, Visible = true}
