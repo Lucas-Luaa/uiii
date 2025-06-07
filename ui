@@ -1,4 +1,4 @@
--- Hi
+-- Fuck 
 
 
 local cloneref = cloneref or function(a)
@@ -2927,7 +2927,7 @@ function am:AddTab(t)
                 ImageColor3 = b.Themes.AccentColor,
                 ImageTransparency = 0.5,
                 AnchorPoint = an.Default and Vector2.new(1, 0.5) or Vector2.new(0, 0.5),
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(198, 198, 198),
                 BackgroundTransparency = 1,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                 BorderSizePixel = 0,
@@ -2992,7 +2992,7 @@ function am:AddTab(t)
                     )
                     c:Animation(
                         c2,
-                        {ImageColor3 = an.Default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(125, 125, 125)},
+                        {ImageColor3 = an.Default and Color3.fromRGB(198, 198, 198) or Color3.fromRGB(125, 125, 125)},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
@@ -3057,7 +3057,7 @@ function am:AddTab(t)
                         )
                         c:Animation(
                             c2,
-                            {ImageColor3 = an.Default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(125, 125, 125)},
+                            {ImageColor3 = an.Default and Color3.fromRGB(198, 198, 198) or Color3.fromRGB(125, 125, 125)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
