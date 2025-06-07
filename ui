@@ -1,4 +1,4 @@
--- Hiหฟกหฟ
+-- Hi
 
 
 local cloneref = cloneref or function(a)
@@ -82,7 +82,7 @@ local b, c = {
         },
         ["Snow"] = {
             AccentColor = Color3.fromRGB(255, 255, 255),
-            BackgroundColor = Color3.fromRGB(59, 59, 59),
+            BackgroundColor = Color3.fromRGB(75, 75, 75),
             TextColor = Color3.fromRGB(255, 255, 255),
             DisabledTextColor = Color3.fromRGB(255, 255, 255)
         },
@@ -2953,136 +2953,138 @@ function am:AddTab(t)
                 bY.Size = UDim2.new(1, -54, 0, c4)
             end
         end
- function bU:Set(c5)
-    an.Default = c5
-    if an.Flags then
-        b.Flags[tostring(an.Flags)] = an.Default
-    end
-    bZ = c:LightenColor(b.Themes.BackgroundColor, 0.5)
-    b_ = c:LightenColor(b.Themes.BackgroundColor, 0.25)
-    c:Thread(
-        function()
-            c:Animation(
-                c0,
-                {BackgroundTransparency = an.Default and 0.5 or 1},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
+        function bU:Set(c5)
+            an.Default = c5
+            if an.Flags then
+                b.Flags[tostring(an.Flags)] = an.Default
+            end
+            bZ = c:LightenColor(b.Themes.BackgroundColor, 0.5)
+            b_ = c:LightenColor(b.Themes.BackgroundColor, 0.25)
+            c:Thread(
+                function()
+                    c:Animation(
+                        c0,
+                        {BackgroundTransparency = an.Default and 0.5 or 1},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                    c:Animation(
+                        c2,
+                        {AnchorPoint = an.Default and Vector2.new(1, 0.5) or Vector2.new(0, 0.5)},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                    c:Animation(
+                        c2,
+                        {Position = an.Default and UDim2.new(1, -2, 0.5, 0) or UDim2.new(0, 2, 0.5, 0)},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                    c:Animation(
+                        c2,
+                        {ImageTransparency = an.Default and 0 or 0.5},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                    c:Animation(
+                        c2,
+                        {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                    c:Animation(
+                        c1,
+                        {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                    c:Animation(
+                        c1,
+                        {Thickness = an.Default and 0 or 1},
+                        b.AnimationSpeed,
+                        b.EasingStyle.Quad,
+                        b.EasingDirection.Out
+                    )
+                end
             )
-            c:Animation(
-                c2,
-                {AnchorPoint = an.Default and Vector2.new(1, 0.5) or Vector2.new(0, 0.5)},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
-            )
-            c:Animation(
-                c2,
-                {Position = an.Default and UDim2.new(1, -2, 0.5, 0) or UDim2.new(0, 2, 0.5, 0)},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
-            )
-            c:Animation(
-                c2,
-                {ImageTransparency = an.Default and 0 or 0.5},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
-            )
-            c:Animation(
-                c2,
-                {ImageColor3 = an.Default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(125, 125, 125)},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
-            )
-            c:Animation(
-                c1,
-                {Color = b.Themes.AccentColor},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
-            )
-            c:Animation(
-                c1,
-                {Thickness = an.Default and 0 or 1},
-                b.AnimationSpeed,
-                b.EasingStyle.Quad,
-                b.EasingDirection.Out
-            )
+            if bU.Callback then
+                bU.Callback(an.Default)
+            end
+            return bU
         end
-    )
-    if bU.Callback then
-        bU.Callback(an.Default)
-    end
-    return bU
-end
-
-bV.Activated:Connect(
-    function()
-        an.Default = not an.Default
         if an.Flags then
             b.Flags[tostring(an.Flags)] = an.Default
         end
-        c:Thread(
+        bV.Activated:Connect(
             function()
-                c:Animation(
-                    c0,
-                    {BackgroundTransparency = an.Default and 0.5 or 1},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
+                an.Default = not an.Default
+                if an.Flags then
+                    b.Flags[tostring(an.Flags)] = an.Default
+                end
+                c:Thread(
+                    function()
+                        c:Animation(
+                            c0,
+                            {BackgroundTransparency = an.Default and 0.5 or 1},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                        c:Animation(
+                            c2,
+                            {AnchorPoint = an.Default and Vector2.new(1, 0.5) or Vector2.new(0, 0.5)},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                        c:Animation(
+                            c2,
+                            {Position = an.Default and UDim2.new(1, -2, 0.5, 0) or UDim2.new(0, 2, 0.5, 0)},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                        c:Animation(
+                            c2,
+                            {ImageTransparency = an.Default and 0 or 0.5},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                        c:Animation(
+                            c2,
+                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                        c:Animation(
+                            c1,
+                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                        c:Animation(
+                            c1,
+                            {Thickness = an.Default and 0 or 1},
+                            b.AnimationSpeed,
+                            b.EasingStyle.Quad,
+                            b.EasingDirection.Out
+                        )
+                    end
                 )
-                c:Animation(
-                    c2,
-                    {AnchorPoint = an.Default and Vector2.new(1, 0.5) or Vector2.new(0, 0.5)},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
-                )
-                c:Animation(
-                    c2,
-                    {Position = an.Default and UDim2.new(1, -2, 0.5, 0) or UDim2.new(0, 2, 0.5, 0)},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
-                )
-                c:Animation(
-                    c2,
-                    {ImageTransparency = an.Default and 0 or 0.5},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
-                )
-                c:Animation(
-                    c2,
-                    {ImageColor3 = an.Default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(125, 125, 125)},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
-                )
-                c:Animation(
-                    c1,
-                    {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
-                )
-                c:Animation(
-                    c1,
-                    {Thickness = an.Default and 0 or 1},
-                    b.AnimationSpeed,
-                    b.EasingStyle.Quad,
-                    b.EasingDirection.Out
-                )
+                if bU.Callback then
+                    bU.Callback(an.Default)
+                end
             end
         )
-        if bU.Callback then
-            bU.Callback(an.Default)
-        end
-    end
-)
         function bU:OnChanged(c6)
             bU.Callback = c6
             if bU.Callback then
