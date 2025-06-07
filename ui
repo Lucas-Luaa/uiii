@@ -1,4 +1,4 @@
--- Hi
+-- HiDSFSF
 
 
 local cloneref = cloneref or function(a)
@@ -2800,7 +2800,7 @@ function am:AddTab(t)
                 TextColor3 = Color3.fromRGB(0, 0, 0),
                 TextSize = 14,
                 AutomaticSize = Enum.AutomaticSize.Y,
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(120, 120, 120),
                 BackgroundTransparency = 0.8700000047683716,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                 LayoutOrder = 7,
@@ -2813,7 +2813,7 @@ function am:AddTab(t)
                 b:Create("UICorner", {CornerRadius = UDim.new(0, 4)}),
                 b:Create(
                     "UIStroke",
-                    {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = Color3.fromRGB(255, 255, 255)}
+                    {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = Color3.fromRGB(35, 35, 35)}
                 )
             }
         )
@@ -2992,14 +2992,14 @@ function am:AddTab(t)
                     )
                     c:Animation(
                         c2,
-                        {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                        {ImageColor3 = an.Default and b_ or Color3.fromRGB(255, 255, 255)},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
                     )
                     c:Animation(
                         c1,
-                        {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
+                        {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(255, 255, 255)},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
@@ -3059,14 +3059,14 @@ function am:AddTab(t)
                         )
                         c:Animation(
                             c2,
-                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(255, 255, 255)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
                         )
                         c:Animation(
                             c1,
-                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
+                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(255, 255, 255)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
@@ -3599,7 +3599,7 @@ function am:AddTab(t)
                 TextSize = 14,
                 AutoButtonColor = false,
                 AutomaticSize = Enum.AutomaticSize.Y,
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(120, 120, 120),
                 BackgroundTransparency = 0.9,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                 LayoutOrder = 7,
