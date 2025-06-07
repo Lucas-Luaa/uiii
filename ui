@@ -1,4 +1,4 @@
--- Hi11
+-- HiDFSDFSDFSDFSDFS
 
 
 local cloneref = cloneref or function(a)
@@ -2894,7 +2894,7 @@ function am:AddTab(t)
         )
         local bL = bY.TextBounds.Y
         bY.Size = UDim2.new(1, -54, 0, bL)
-        local bZ = c:LightenColor(b.Themes.BackgroundColor, 0.5)
+        local bZ = c:LightenColor(b.Themes.AccentColor, 0.5)
         local b_ = c:LightenColor(b.Themes.BackgroundColor, 0.25)
         local c0 =
             b:Create(
@@ -2958,7 +2958,7 @@ function am:AddTab(t)
             if an.Flags then
                 b.Flags[tostring(an.Flags)] = an.Default
             end
-            bZ = c:LightenColor(b.Themes.BackgroundColor, 0.5)
+            bZ = c:LightenColor(b.Themes.AccentColor, 0.5)
             b_ = c:LightenColor(b.Themes.BackgroundColor, 0.25)
             c:Thread(
                 function()
@@ -3059,14 +3059,14 @@ function am:AddTab(t)
                         )
                         c:Animation(
                             c2,
-                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(255, 255, 255)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
                         )
                         c:Animation(
                             c1,
-                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
+                            {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(255, 255, 255)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
