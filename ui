@@ -2992,14 +2992,14 @@ function am:AddTab(t)
                     )
                     c:Animation(
                         c2,
-                        {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                        {ImageColor3 = an.Default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(125, 125, 125)},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
                     )
                     c:Animation(
                         c1,
-                        {Color = an.Default and b.Themes.AccentColor or Color3.fromRGB(125, 125, 125)},
+                        {Color = b.Themes.AccentColor},
                         b.AnimationSpeed,
                         b.EasingStyle.Quad,
                         b.EasingDirection.Out
@@ -3018,9 +3018,7 @@ function am:AddTab(t)
             end
             return bU
         end
-        if an.Flags then
-            b.Flags[tostring(an.Flags)] = an.Default
-        end
+        
         bV.Activated:Connect(
             function()
                 an.Default = not an.Default
@@ -3059,7 +3057,7 @@ function am:AddTab(t)
                         )
                         c:Animation(
                             c2,
-                            {ImageColor3 = an.Default and b_ or Color3.fromRGB(125, 125, 125)},
+                            {ImageColor3 = an.Default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(125, 125, 125)},
                             b.AnimationSpeed,
                             b.EasingStyle.Quad,
                             b.EasingDirection.Out
