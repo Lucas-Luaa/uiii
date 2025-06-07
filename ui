@@ -1,4 +1,4 @@
--- Hi
+-- Hi11
 
 
 local cloneref = cloneref or function(a)
@@ -2800,7 +2800,7 @@ function am:AddTab(t)
                 TextColor3 = Color3.fromRGB(0, 0, 0),
                 TextSize = 14,
                 AutomaticSize = Enum.AutomaticSize.Y,
-                BackgroundColor3 = Color3.fromRGB(120, 120, 120),
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 BackgroundTransparency = 0.8700000047683716,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                 LayoutOrder = 7,
@@ -3345,8 +3345,8 @@ function am:AddTab(t)
                 Rotation = 90,
                 Color = ColorSequence.new(
                     {
-                        ColorSequenceKeypoint.new(0, b.Themes.BackgroundColor),
-                        ColorSequenceKeypoint.new(1, c:LightenColor(b.Themes.BackgroundColor, 0.5))
+                        ColorSequenceKeypoint.new(0, b.Themes.AccentColor),
+                        ColorSequenceKeypoint.new(1, c:LightenColor(b.Themes.AccentColor, 0.5))
                     }
                 ),
                 Parent = ch
@@ -3599,7 +3599,7 @@ function am:AddTab(t)
                 TextSize = 14,
                 AutoButtonColor = false,
                 AutomaticSize = Enum.AutomaticSize.Y,
-                BackgroundColor3 = Color3.fromRGB(120, 120, 120),
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 BackgroundTransparency = 0.9,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                 LayoutOrder = 7,
@@ -3737,7 +3737,7 @@ function am:AddTab(t)
             "Frame",
             {
                 Name = "SliderValue",
-                BackgroundColor3 = b.Themes.BackgroundColor,
+                BackgroundColor3 = b.Themes.AccentColor,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                 BorderSizePixel = 0,
                 Size = UDim2.fromScale(cz, 1),
@@ -3766,7 +3766,7 @@ function am:AddTab(t)
             {
                 Name = "SliderImage",
                 Image = "http://www.roblox.com/asset/?id=12266946128",
-                ImageColor3 = b.Themes.BackgroundColor,
+                ImageColor3 = b.Themes.AccentColor,
                 AnchorPoint = Vector2.new(0, 0.5),
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 BackgroundTransparency = 1,
