@@ -1307,7 +1307,7 @@ b.Settings.FontFace = an.FontFace
 self.Settings.Keybind = an.MinimizeKey
 self.Settings.Transparency = an.Transparency
 self.Theme = an.Theme
-local ao = ui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local ao = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 local ap
 local aq = 0
 for e, am in pairs(ao:GetChildren()) do
